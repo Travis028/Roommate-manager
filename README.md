@@ -1,24 +1,33 @@
-# Roommate Manager
+# Roommate Manager 
 
-A brief description of what this project does and who it's for.
+A simple, modern web application to help roommates manage their shared living space. This project provides a central dashboard to track chores, bills, and a shared calendar, making cohabitation more organized and harmonious.
 
-## 🚀 Features
+## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- **Dashboard Overview:** At-a-glance summary of pending chores, unpaid bills, and upcoming events.
+- **Chore Tracking:** Assign chores to roommates and track their completion status.
+- **Bill Management:** Log shared bills, amounts, and due dates, and mark them as paid.
+- **Shared Calendar:** Keep track of important house events, meetings, or deadlines.
+- **Roommate Directory:** A simple list of all roommates and their contact information.
 
-## 📦 Installation
+## 🛠️ Tech Stack
+
+This project is a full-stack web application built with:
+
+*   **Backend:** **Rust** with the **[Axum](https://github.com/tokio-rs/axum)** web framework for a high-performance, reliable, and memory-safe API.
+*   **Frontend:** Vanilla **HTML**, **CSS**, and **JavaScript**, served directly from the Rust backend.
+
+##  Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You need to have the Rust toolchain installed on your system. If you don't have it, you can install it from [rust-lang.org](https://www.rust-lang.org/tools/install).
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/project-ww.git
-
-# Navigate to project directory
-cd project-ww
-
-# Install dependencies
-npm install  # or yarn install
+# This command will install rustup, the Rust toolchain manager
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ## 🛠️ Usage
@@ -40,7 +49,7 @@ REACT_APP_API_URL=your_api_url_here
 # Add other environment variables here
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are always welcome! Please follow these steps:
 
@@ -50,11 +59,11 @@ Contributions are always welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+##  Contact
 
 Your Name - [@your_twitter](https://twitter.com/your_twitter) - email@example.com
 Project Link: [https://github.com/yourusername/project-ww](https://github.com/yourusername/project-ww)
