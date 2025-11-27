@@ -17,6 +17,32 @@ struct Chore {
     completed: bool,
 }
 
+#[derive(Serialize)]
+struct Bill {
+    id: u64,
+    name: String,
+    amount: f64,
+    #[serde(rename = "dueDate")]
+    due_date: String,
+    paid: bool,
+}
+
+#[derive(Serialize)]
+struct Event {
+    id: u64,
+    title: String,
+    date: String,
+    participants: Vec<String>,
+}
+
+#[derive(Serialize)]
+struct Roommate {
+    id: u64,
+    name: String,
+    email: String,
+    phone: String,
+}
+
 #[tokio::main]
 async fn main() {
     let app = Router::new()
