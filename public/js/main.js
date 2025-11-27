@@ -1,9 +1,5 @@
 // Data storage
-let chores = JSON.parse(localStorage.getItem('chores')) || [
-    { id: 1, task: 'Clean kitchen', assignedTo: 'Alex', dueDate: '2023-06-15', completed: false },
-    { id: 2, task: 'Take out trash', assignedTo: 'Sam', dueDate: '2023-06-14', completed: true },
-    { id: 3, task: 'Vacuum living room', assignedTo: 'Jordan', dueDate: '2023-06-16', completed: false }
-];
+let chores = [];
 
 let bills = JSON.parse(localStorage.getItem('bills')) || [
     { id: 1, name: 'Electricity', amount: 120, dueDate: '2023-06-20', paid: false },
@@ -31,7 +27,7 @@ let notifications = JSON.parse(localStorage.getItem('notifications')) || [
 
 // Save data to localStorage
 function saveData() {
-    localStorage.setItem('chores', JSON.stringify(chores));
+    // localStorage.setItem('chores', JSON.stringify(chores)); // We will remove this later
     localStorage.setItem('bills', JSON.stringify(bills));
     localStorage.setItem('events', JSON.stringify(events));
     localStorage.setItem('roommates', JSON.stringify(roommates));
@@ -453,8 +449,13 @@ function addRoommate() {
 }
 
 // Initialize the app
-window.onload = function() {
-    renderDashboard();
+window.onload = async function() {
+    // Fetch chores from the backend
+    const response = await fetch('/api/chores');
+    chores = await response.json();
+
+    // Initial render
+    renderDashboard(); // This will now use the fetched data
     
     // Set up roommate dropdown
     const assigneeSelect = document.getElementById('chore-assignee');
